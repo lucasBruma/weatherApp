@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Weather App</title>
+</head>
+<body onload="onLoad()">
+    <section class="main">
+        <div class="main__container">
+            <div class="main__top">
+                <button class="search-main">Search for places</button>
+                <span class="material-symbols-outlined my_location">my_location</span>
+            </div>
+            <div class="main__body">
+                <div class="weather-icon"><img src="icons/unknown.png"></div>
+                <div>
+                    <h1 class="main-temperature">15</h1>
+                    <span class="main-temperature__celsius">°C</span>
+                    <span class="main-temperature__fa">°F</span>
+                </div>
+                <h4 class="main-weather">Shower</h4>
+            </div>
+            <div class="main__bottom">
+                <p class="main__bottom-day">Today - Fri, 5 Jun</p>
+                <div class="main__bottom-location">
+                    <span class="material-symbols-outlined">location_on</span>
+                    <p class="location-name">Helsinki</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="search">
+            <div class="search__top">
+                <div class="search__close-container">
+                    <span class="material-symbols-outlined search__close">
+                        close
+                    </span>
+                </div>
+                <div class="search__search">
+                    <div>
+                        <span class="material-symbols-outlined">search</span>
+                        <input type="text" name="search" class="search__input" placeholder="search location">
+                    </div>
+                </div>
+            </div>
+            <div class="search__body"> 
+                <div class="option barcelona-button" tabindex="1">
+                    Barcelona
+                </div> 
+                <div class="option belo-button" tabindex="1">
+                    Belo Horizonte
+                </div>       
+                <div class="option bogota-button" tabindex="1">
+                    Bogotá
+                </div>
+                <div class="option dubai-button" tabindex="1">
+                    Dubai
+                </div>
+                <div class="option lima-button" tabindex="1">
+                    Lima
+                </div> 
+                <div class="option london-button" tabindex="1">
+                    London
+                </div>   
+                <div class="option miami-button" tabindex="1">
+                    Miami
+                </div>
+                <div class="option paris-button" tabindex="1">
+                    Paris
+                </div>
+            </div>
+        </div>
+      
+    </section>
+
+<!-- description -->
+
+    <section class="description">
+        <div class="description__top">
+            <button class="description__top-item celsius-button">°C</button>
+            <button class="description__top-item fa-button">°F</button>
+        </div>
+        <div class="container">
+            <div class="carousel">
+                <div class="carousel__container">
+                    <button aria-label="Previous" class="carousel__previous">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel__list">
+                        <div class="days__item">
+                            <div class="days__item-day">
+                                Tomorrow
+                            </div>
+                            <div class="days__item-icon">
+                                <span class="material-symbols-outlined">clear_day</span>
+                            </div>
+                            <div class="days__item-bottom">
+                                <div class="days__item-temp-max">16°C</div>
+                                <div class="days__item-temp-min">11°C</div>
+                            </div>
+                        </div>
+                        <div class="days__item">
+                            <div class="days__item-day">
+                                Tomorrow
+                            </div>
+                            <div class="days__item-icon">
+                                <span class="material-symbols-outlined">thunderstorm</span>
+                            </div>
+                            <div class="days__item-bottom">
+                                <div class="days__item-temp-max">16°C</div>
+                                <div class="days__item-temp-min">11°C</div>
+                            </div>
+                        </div>
+                        <div class="days__item">
+                            <div class="days__item-day">
+                                Tomorrow
+                            </div>
+                            <div class="days__item-icon">
+                                <span class="material-symbols-outlined">cloudy_snowing</span>
+                            </div>
+                            <div class="days__item-bottom">
+                                <div class="days__item-temp-max">16°C</div>
+                                <div class="days__item-temp-min">11°C</div>
+                            </div>
+                        </div>
+                        <div class="days__item">
+                            <div class="days__item-day">
+                                Tomorrow
+                            </div>
+                            <div class="days__item-icon">
+                                <span class="material-symbols-outlined">partly_cloudy_day</span>
+                            </div>
+                            <div class="days__item-bottom">
+                                <div class="days__item-temp-max">16°C</div>
+                                <div class="days__item-temp-min">11°C</div>
+                            </div>
+                        </div>
+                        <div class="days__item">
+                            <div class="days__item-day">
+                                Tomorrow
+                            </div>
+                            <div class="days__item-icon">
+                                <span class="material-symbols-outlined">cloudy</span>
+                            </div>
+                            <div class="days__item-bottom">
+                                <div class="days__item-temp-max">16°C</div>
+                                <div class="days__item-temp-min">11°C</div>
+                            </div>
+                        </div>
+                        <div class="days__item">
+                            <div class="days__item-day">
+                                Tomorrow
+                            </div>
+                            <div class="days__item-icon">
+                                <span class="material-symbols-outlined">cloudy</span>
+                            </div>
+                            <div class="days__item-bottom">
+                                <div class="days__item-temp-max">16°C</div>
+                                <div class="days__item-temp-min">11°C</div>
+                            </div>
+                        </div>
+                        <div class="days__item">
+                            <div class="days__item-day">
+                                Tomorrow
+                            </div>
+                            <div class="days__item-icon">
+                                <span class="material-symbols-outlined">cloudy</span>
+                            </div>
+                            <div class="days__item-bottom">
+                                <div class="days__item-temp-max">16°C</div>
+                                <div class="days__item-temp-min">11°C</div>
+                            </div>
+                        </div>
+                        <div class="days__item">
+                            <div class="days__item-day">
+                                Tomorrow
+                            </div>
+                            <div class="days__item-icon">
+                                <span class="material-symbols-outlined">cloudy</span>
+                            </div>
+                            <div class="days__item-bottom">
+                                <div class="days__item-temp-max">16°C</div>
+                                <div class="days__item-temp-min">11°C</div>
+                            </div>
+                        </div>
+                        <div class="days__item">
+                            <div class="days__item-day">
+                                Tomorrow
+                            </div>
+                            <div class="days__item-icon">
+                                <span class="material-symbols-outlined">cloudy</span>
+                            </div>
+                            <div class="days__item-bottom">
+                                <div class="days__item-temp-max">16°C</div>
+                                <div class="days__item-temp-min">11°C</div>
+                            </div>
+                        </div>
+                        <div class="days__item">
+                            <div class="days__item-day">
+                                Tomorrow
+                            </div>
+                            <div class="days__item-icon">
+                                <span class="material-symbols-outlined">cloudy</span>
+                            </div>
+                            <div class="days__item-bottom">
+                                <div class="days__item-temp-max">16°C</div>
+                                <div class="days__item-temp-min">11°C</div>
+                            </div>
+                        </div>
+                        <div class="days__item">
+                            <div class="days__item-day">
+                                Tomorrow
+                            </div>
+                            <div class="days__item-icon">
+                                <span class="material-symbols-outlined">cloudy</span>
+                            </div>
+                            <div class="days__item-bottom">
+                                <div class="days__item-temp-max">16°C</div>
+                                <div class="days__item-temp-min">11°C</div>
+                            </div>
+                        </div>
+                        <div class="days__item">
+                            <div class="days__item-day">
+                                Tomorrow
+                            </div>
+                            <div class="days__item-icon">
+                                <span class="material-symbols-outlined">cloudy</span>
+                            </div>
+                            <div class="days__item-bottom">
+                                <div class="days__item-temp-max">16°C</div>
+                                <div class="days__item-temp-min">11°C</div>
+                            </div>
+                        </div>
+                        <div class="days__item">
+                            <div class="days__item-day">
+                                Tomorrow
+                            </div>
+                            <div class="days__item-icon">
+                                <span class="material-symbols-outlined">cloudy</span>
+                            </div>
+                            <div class="days__item-bottom">
+                                <div class="days__item-temp-max">16°C</div>
+                                <div class="days__item-temp-min">11°C</div>
+                            </div>
+                        </div>
+                        <div class="days__item">
+                            <div class="days__item-day">
+                                Tomorrow
+                            </div>
+                            <div class="days__item-icon">
+                                <span class="material-symbols-outlined">cloudy</span>
+                            </div>
+                            <div class="days__item-bottom">
+                                <div class="days__item-temp-max">16°C</div>
+                                <div class="days__item-temp-min">11°C</div>
+                            </div>
+                        </div>
+                        <div class="days__item">
+                            <div class="days__item-day">
+                                Tomorrow
+                            </div>
+                            <div class="days__item-icon">
+                                <span class="material-symbols-outlined">cloudy</span>
+                            </div>
+                            <div class="days__item-bottom">
+                                <div class="days__item-temp-max">16°C</div>
+                                <div class="days__item-temp-min">11°C</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <button aria-label="Next" class="carousel__next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div role="tablist" class="carousel__indicators"></div>
+            </div>
+        </div>
+
+        <!-- hightlights -->
+
+        <div class="hightlights">
+            <h2>Today's hightlights</h2>
+            <div class="hightlights__container">
+                <div class="hightlights__item hightlights__wind">
+                    <p>Wind status</p>
+                    <div class="hightlights__item-main">
+                        <h2 class="wind-speed">7</h2><span>m/s</span>
+                    </div>
+                </div>
+                <div class="hightlights__item hightlights__humidity">
+                    <p>Humidity</p>
+                    <div class="hightlights__item-main">
+                        <h2 class="humidity">84</h2><span>%</span>
+                    </div> 
+                    <div class="humidity__percentages">
+                        <span>0</span>
+                        <span>50</span>
+                        <span>100</span>
+                    </div>
+                    <div class="humidity__container">
+                        <div class="humidity__bar"></div>
+                    </div>
+                    <div class="humidity__percentage">
+                        <span>%</span>
+                    </div>
+                </div>
+                <div class="hightlights__item hightlights__visibility">
+                    <p>Visibility</p>
+                    <div class="hightlights__item-main">
+                        <h2 class="visibility">6,4</h2><span>km</span>
+                    </div>
+                </div>
+                <div class="hightlights__item hightlights__pressure">
+                    <p>Air pressure</p>
+                    <div class="hightlights__item-main">
+                        <h2 class="pressure">998</h2><span>mb</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tiny-footer">
+            created by <a href="https://github.com/lucasBruma" target="_blank">lucasBruma</a>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+</html>
